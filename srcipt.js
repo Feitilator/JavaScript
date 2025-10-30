@@ -1,15 +1,15 @@
-let num = 42
-let firstName = "Slava"
-const isProgrammer = true
+// let num = 42
+// let firstName = "Skitter"
+// const isProgrammer = true
 
 // Can do
-let $ = 'test'
-let $num = 42
-let _ = 42
-let _num = 12
-let fisrt_name = 'Sanya' //bad
-let myNum = 34 //good
-let num42 = 10
+// let $ = 'test'
+// let $num = 42
+// let _ = 42
+// let _num = 12
+// let fisrt_name = 'Dsal' //bad
+// let myNum = 34 //good
+// let num42 = 10
 
 //Restricted
 // let 42num = 11
@@ -37,7 +37,7 @@ let num42 = 10
 // let num3 = (num + 10 * 2) / (5 - 1)
 // console.log(num3)
 
-// const fullName = firstName + " " +"Volkov"
+// const fullName = firstName + " " +"dallas"
 // console.log(fullName)
 
 const resultElement = document.getElementById('result')
@@ -46,9 +46,11 @@ const input2 = document.getElementById('input2')
 const sumbitBtn = document.getElementById('sumbit')
 const plusBtn = document.getElementById('plus')
 const minusBtn = document.getElementById('minus')
+const multiplicationBtn = document.getElementById('multiplication')
+const divisionBtn = document.getElementById('division')
 let action = '+'
 
-console.log(input1.value)
+// console.log(input1.value)
 // console.log(resultElement.textContent)
 // resultElement.textContent = 49 - 7
 
@@ -58,6 +60,14 @@ plusBtn.onclick = function (){
 
 minusBtn.onclick = function (){
     action = '-' 
+}
+
+multiplicationBtn.onclick = function (){
+    action = '*' 
+}
+
+divisionBtn.onclick = function (){
+    action = '/' 
 }
 
 function printResult(result) {
@@ -76,7 +86,12 @@ function computeNumberWithAction(inp1,inp2,actionSymbol){
         return num1 + num2
     }else if(actionSymbol == '-') {
         return num1 - num2
+    }else if (actionSymbol == '*'){
+        return num1 * num2
+    }else if (actionSymbol == '/'){
+        return num1 / num2
     }
+    // return actionSymbol == '+' ? num1 + num2 : num1 - num2
 }
 
 sumbitBtn.onclick = function (){
